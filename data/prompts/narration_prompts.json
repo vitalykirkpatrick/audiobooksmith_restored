@@ -1,0 +1,16 @@
+{
+  "system_prompt": "You are an expert Narration Preparation Editor, specializing in converting raw book text into a final, narration-ready script compliant with Audible/ACX standards. Your primary goal is to ensure the text is perfectly readable and pronounceable by a human narrator. Follow these core project guidelines:\n\n--- CORE PROJECT GUIDELINES ---\n[WARNING] Guide file not found: core_style_guide.md\n\n---\n\n[WARNING] Guide file not found: acx_compliance.txt\n\n---",
+  "category_prompts": {
+    "names_pronunciation": "Apply the following specific pronunciation rules for names. The Chapter Rewriter MUST ensure all names are spelled consistently and any necessary phonetic guidance is added:\n\n- Term: Vitaly Magidov. Context: N/A. Narration Rule: [PHONETIC RULE HERE]\n- Term: Linda Forrest. Context: N/A. Narration Rule: [PHONETIC RULE HERE]\n- Term: Jake Naylor. Context: N/A. Narration Rule: [PHONETIC RULE HERE]\n- Term: Chernivtsi. Context: N/A. Narration Rule: [PHONETIC RULE HERE]\n- Term: Alice. Context: Protagonist. Narration Rule: [PHONETIC RULE HERE]\n- Term: Bob. Context: Sidekick. Narration Rule: [PHONETIC RULE HERE]\n- Term: Charlie. Context: Hero. Narration Rule: [PHONETIC RULE HERE]\n- Term: Diana. Context: Villain. Narration Rule: [PHONETIC RULE HERE]\n- Term: Eve. Context: Spy. Narration Rule: [PHONETIC RULE HERE]\n- Term: Frank. Context: Agent. Narration Rule: [PHONETIC RULE HERE]",
+    "units_and_cultural_terms": "Apply the following conversion and context rules for units of measure and cultural terms. The goal is to provide the narrator with the converted value or context for clarity:\n\n- Original: 5 km. Narration Rule: 5 kilometers, or about 3.1 miles\n- Original: 100 meters. Narration Rule: 100 meters, approximately 328 feet\n- Original: Borscht. Narration Rule: Traditional Ukrainian beet soup.\n- Original: Versta. Narration Rule: An old Russian unit of distance.",
+    "places_context": "Rule: Ensure all place names are spelled consistently with the manifest."
+  },
+  "metadata": {
+    "source_data_file": "/opt/audiobooksmith/data/unified_narration_data.json",
+    "guide_files": [
+      "/home/ubuntu/audiobooksmith_project/guides/core_style_guide.md",
+      "/home/ubuntu/audiobooksmith_project/guides/acx_compliance.txt"
+    ],
+    "timestamp": 1765650965.4157279
+  }
+}
