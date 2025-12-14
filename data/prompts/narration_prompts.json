@@ -1,16 +1,25 @@
 {
-  "system_prompt": "You are an expert Narration Preparation Editor, specializing in converting raw book text into a final, narration-ready script compliant with Audible/ACX standards. Your primary goal is to ensure the text is perfectly readable and pronounceable by a human narrator. Follow these core project guidelines:\n\n--- CORE PROJECT GUIDELINES ---\n[WARNING] Guide file not found: core_style_guide.md\n\n---\n\n[WARNING] Guide file not found: acx_compliance.txt\n\n---",
-  "category_prompts": {
-    "names_pronunciation": "Apply the following specific pronunciation rules for names. The Chapter Rewriter MUST ensure all names are spelled consistently and any necessary phonetic guidance is added:\n\n- Term: Vitaly Magidov. Context: N/A. Narration Rule: [PHONETIC RULE HERE]\n- Term: Linda Forrest. Context: N/A. Narration Rule: [PHONETIC RULE HERE]\n- Term: Jake Naylor. Context: N/A. Narration Rule: [PHONETIC RULE HERE]\n- Term: Chernivtsi. Context: N/A. Narration Rule: [PHONETIC RULE HERE]\n- Term: Alice. Context: Protagonist. Narration Rule: [PHONETIC RULE HERE]\n- Term: Bob. Context: Sidekick. Narration Rule: [PHONETIC RULE HERE]\n- Term: Charlie. Context: Hero. Narration Rule: [PHONETIC RULE HERE]\n- Term: Diana. Context: Villain. Narration Rule: [PHONETIC RULE HERE]\n- Term: Eve. Context: Spy. Narration Rule: [PHONETIC RULE HERE]\n- Term: Frank. Context: Agent. Narration Rule: [PHONETIC RULE HERE]",
-    "units_and_cultural_terms": "Apply the following conversion and context rules for units of measure and cultural terms. The goal is to provide the narrator with the converted value or context for clarity:\n\n- Original: 5 km. Narration Rule: 5 kilometers, or about 3.1 miles\n- Original: 100 meters. Narration Rule: 100 meters, approximately 328 feet\n- Original: Borscht. Narration Rule: Traditional Ukrainian beet soup.\n- Original: Versta. Narration Rule: An old Russian unit of distance.",
-    "places_context": "Rule: Ensure all place names are spelled consistently with the manifest."
-  },
-  "metadata": {
-    "source_data_file": "/opt/audiobooksmith/data/unified_narration_data.json",
-    "guide_files": [
-      "/home/ubuntu/audiobooksmith_project/guides/core_style_guide.md",
-      "/home/ubuntu/audiobooksmith_project/guides/acx_compliance.txt"
+    "system_prompt": "You are an expert Linguistic Rewriter for an audiobook production. Your primary task is to convert the provided chapter text into a narration-ready script by strictly applying the following linguistic and unit conversion rules. DO NOT preserve the original English transliterations for names and places; you MUST substitute them with the provided Cyrillic or Hybrid spellings. Maintain the emotional tone and narrative flow of the original text.",
+    "linguistic_substitution_table": {
+        "names": [
+            {"english": "Vitaly", "cyrillic": "Віталій", "language": "Ukrainian"},
+            {"english": "Vasyl Ivanovych", "cyrillic": "Василь Іванович", "language": "Ukrainian"},
+            {"english": "Tamara Petrivna", "cyrillic": "Тамара Петрівна", "language": "Ukrainian"},
+            {"english": "Chernivtsi", "cyrillic": "Чернівці", "language": "Ukrainian"},
+            {"english": "Prut", "cyrillic": "Прут", "language": "Ukrainian"},
+            {"english": "Fastivska", "cyrillic": "Фастівська", "language": "Ukrainian"}
+        ],
+        "cultural_terms": [
+            {"english": "Borscht", "narration_rule": "Borscht, the traditional Ukrainian beet soup"},
+            {"english": "Ravlik Pavlik", "narration_rule": "Равлик-Павлик, высунь рожки, Дам тебе кусок картошки. Если будет мало — дам кусочек сала."}
+        ]
+    },
+    "unit_conversion_table": [
+        {"original": "4 kg", "rewrite": "Four kilograms — about eight-point-eight pounds"},
+        {"original": "5 km", "rewrite": "5 kilometers, or about 3.1 miles"}
     ],
-    "timestamp": 1765650965.4157279
-  }
+    "ssml_pacing_rules": [
+        {"context": "Before/after a quote", "tag": "<break time=\"0.5s\" />"},
+        {"context": "After author’s poem stanza", "tag": "<break time=\"0.8s\" />"}
+    ]
 }
